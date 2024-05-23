@@ -35,6 +35,7 @@
 
 .container {
   display: flex;
+  gap: 10px;
 }
 
 .text-iron {
@@ -46,7 +47,7 @@
   justify-content: center;
   flex-direction: column;
   gap: 30px;
-  width: 70%;
+  width: 60%;
 }
 
 .planCard {
@@ -84,4 +85,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 30%;
+  position: fixed;
+  left: 60%;
+  overflow-y: scroll;
+  max-height: 50vh;
 }

@@ -28,21 +28,28 @@ export default function TravelList() {
   return (
     <div className="container">
       <div className="travelList">
-        {travelPlans.map((plan) => (
-          <TravelCard
-            plan={plan}
-            handleDelete={handleDelete}
-            handleFavorite={handleFavorite}
-          />
-        ))}
+        {travelPlans.length ? (
+          travelPlans.map((plan) => (
+            <TravelCard
+              plan={plan}
+              handleDelete={handleDelete}
+              handleFavorite={handleFavorite}
+            />
+          ))
+        ) : (
+          <p>What? Are you going around the world? 😮 🌍</p>
+        )}
       </div>
       <div className="favorites">
         <h2>Favorites</h2>
 
-        {favorites &&
+        {favorites.length ? (
           favorites.map((plan) => (
             <TravelCard plan={plan} handleFavorite={handleFavorite} />
-          ))}
+          ))
+        ) : (
+          <p>You haven't favorited any plans yet ☹️</p>
+        )}
       </div>
     </div>
   );
